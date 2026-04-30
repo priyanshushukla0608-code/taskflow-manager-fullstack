@@ -21,7 +21,7 @@ export default function SignupPage() {
     setLoading(true);
 
     try {
-      const res = await api.post('/auth/signup/', { name, email, password });
+      const res = await api.post('/api/auth/signup/', { name, email, password });
       setToken(res.data.access);
       setUser(res.data.user);
       router.push('/dashboard');
